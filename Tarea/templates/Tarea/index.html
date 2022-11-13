@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Familiar</title>
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+<body>
+    <h1>FAMILIARES</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Número Telefónico</th>
+                <th>Fecha de Nacimiento</th>
+            </tr>
+        </thead>
+        {% for familiar in data %}
+        <tr>
+            <td>
+                {{familiar.fields.nombre}}
+            </td>
+            <td>
+                {{familiar.fields.apellido}}
+            </td>
+            <td>
+                {{familiar.fields.telefono}}
+            </td>
+            <td>
+                {{familiar.fields.fecha_nacimiento}}
+            </td>
+        </tr>
+        
+        {% endfor %}
+    </table>
+</body>
+</html>

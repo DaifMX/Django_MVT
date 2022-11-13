@@ -1,0 +1,16 @@
+body {
+    background-color: rgb(19, 19, 19);
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+td {
+    margin: 5%;
+    padding: .5%;
+}
+
+th {
+    color: aqua;
+    width: 5%;
+}
