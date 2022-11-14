@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from Tarea.views import familiar
+from Tarea.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("lista/", familiar)
+    path("personas/all", persona),
+    path("personas/formulario", updateDB),
+    path("personas/filterPersonas", searchDB)
 ]

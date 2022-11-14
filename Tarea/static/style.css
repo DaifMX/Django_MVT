@@ -1,6 +1,6 @@
 body {
     background-color: rgb(19, 19, 19);
-    color: white;
+    color: rgb(255, 255, 255);
     text-align: center;
     font-family: sans-serif;
 }
@@ -13,4 +13,13 @@ td {
 th {
     color: aqua;
     width: 5%;
+}
+
+h2 {
+    color: red;
+}
+
+br {
+    display: block;
+    margin: .2%;
 }
