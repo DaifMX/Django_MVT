@@ -1,0 +1,15 @@
+{% extends "./listaProveedores.html" %}
+
+{% block content %}
+
+<h2>Filtro</h2>
+
+<form action="" method="get">
+    {% csrf_token %}
+
+    {{ formulario.as_p }}
+
+    <input type="submit" value="Buscar">
+</form>
+
+{% endblock %}

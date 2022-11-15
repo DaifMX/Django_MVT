@@ -15,11 +15,26 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from Tarea.views import *
+
+from Tarea.personasViews import *
+from Tarea.productosViews import *
+from Tarea.proveedoresViews import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    
+    #Personas
     path("personas/all", persona),
-    path("personas/formulario", personaPOST),
+    path("personas/add", personaPOST),
     path("personas/filter", personaGET),
+
+    #Productos
+    path("productos/all", producto),
+    path("productos/add", productoPOST),
+    path("productos/filter", productoGET),
+
+    #Productos
+    path("proveedores/all", proveedor),
+    path("proveedores/add", proveedorPOST),
+    path("proveedores/filter", proveedorGET)
 ]

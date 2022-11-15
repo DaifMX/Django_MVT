@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proveedores</title>
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+<body>
+    <h1>Proveedores</h1>
+    {% block content %}
+    {% endblock %}
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>RFC</th>
+                <th>Dirección</th>
+            </tr>
+        </thead>
+        {% for proveedor in data %}
+        <tr>
+            <td>
+                {{proveedor.fields.nombre}}
+            </td>
+            <td>
+                {{proveedor.fields.rfc}}
+            </td>
+            <td>
+                {{proveedor.fields.direccion}}
+            </td>
+        </tr>
+        {% endfor %}
+
+    </table>
+</body>
+</html>
