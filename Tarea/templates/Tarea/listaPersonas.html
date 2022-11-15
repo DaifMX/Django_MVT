@@ -10,9 +10,9 @@
     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
 </head>
 <body>
-    
     <h1>Personas</h1>
     {% block content %}
+    {% endblock %}
     <table>
         <thead>
             <tr>
@@ -37,9 +37,8 @@
                 {{persona.fields.fecha_nacimiento}}
             </td>
         </tr>
-        
         {% endfor %}
-        {% endblock %}
+
     </table>
 </body>
 </html>

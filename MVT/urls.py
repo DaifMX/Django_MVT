@@ -20,6 +20,6 @@ from Tarea.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("personas/all", persona),
-    path("personas/formulario", updateDB),
-    path("personas/filterPersonas", searchDB)
+    path("personas/formulario", personaPOST),
+    path("personas/filter", personaGET),
 ]

@@ -5,3 +5,6 @@ class PersonaFormulario(forms.Form):
     apellido = forms.CharField()
     telefono = forms.IntegerField()
     fecha_nacimiento = forms.DateField()
+
+class FilterPersonaFormulario(forms.Form):
+    id = forms.IntegerField()

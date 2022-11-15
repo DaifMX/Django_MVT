@@ -1,18 +1,31 @@
-{% extends "./listaPersonas.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personas</title>
 
-{% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'formulario.css' %}">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
 
-{% block content %}
+</head>
 
-<h2>Insertar Persona a Base de Datos</h2>
+<body>
+    <h2>Insertar Persona a Base de Datos</h2>
 
-<form action="" method="post">
+    <form action="" method="post">
     {% csrf_token %}
 
     {{ formulario.as_p }}
 
     <input type="submit" value="Añadir">
-</form>
+    </form>
+</body>
+</html>
 
-{% endblock %}
+
+
+
+
+

@@ -1,10 +1,15 @@
 {% extends "./listaPersonas.html" %}
 
-{% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'formulario.css' %}">
-
 {% block content %}
 
-<h2>This is a test</h2>
+<h2>Filtro</h2>
+
+<form action="" method="get">
+    {% csrf_token %}
+
+    {{ formulario.as_p }}
+
+    <input type="submit" value="Buscar">
+</form>
 
 {% endblock %}
